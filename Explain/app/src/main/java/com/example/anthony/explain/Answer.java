@@ -1,3 +1,7 @@
+package com.example.anthony.explain;
+
+import com.example.anthony.explain.User;
+
 /**
  * Created by Anthony on 8/8/2015.
  */

@@ -1,3 +1,5 @@
+package com.example.anthony.explain;
+
 /**
  * Created by Anthony on 8/8/2015.
  */
@@ -13,7 +15,7 @@ public class User {
         return userName;
     }
 
-    public String setUserName(){
-        this.userName = userName;
+    public void setUserName(String user){
+        this.userName = user;
     }
 }

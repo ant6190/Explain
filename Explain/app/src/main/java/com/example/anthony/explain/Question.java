@@ -1,3 +1,7 @@
+package com.example.anthony.explain;
+
+import com.example.anthony.explain.User;
+
 import java.util.ArrayList;
 
 /**
