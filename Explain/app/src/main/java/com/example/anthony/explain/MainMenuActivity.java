@@ -37,7 +37,7 @@ public class MainMenuActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void gotToQuestion(View view) {
+    public void goToQuestions(View view) {
         Intent intent = new Intent(this, QuestionListingActivity.class);
         startActivity(intent);
     }
