@@ -10,12 +10,21 @@ import java.util.ArrayList;
 public class Question {
 
     private String qText;
+    private String qDesc;
     private User qUser;
     private ArrayList<Answer> answers;
 
     public Question(String qText, User qUser){
         this.qText = qText;
         this.qUser = qUser;
+        this.qDesc = "";
+        this.answers = new ArrayList<Answer>();
+    }
+
+    public Question(String qText, User qUser, String qDesc){
+        this.qText = qText;
+        this.qUser = qUser;
+        this.qDesc = qDesc;
         this.answers = new ArrayList<Answer>();
     }
 
@@ -33,6 +42,14 @@ public class Question {
 
     public void setqUser(User user){
         qUser = user;
+    }
+
+    public String getqDesc(){
+        return qDesc;
+    }
+
+    public void setqDesc(String text){
+        qDesc = text;
     }
 
     public void addAnswer(Answer answer){

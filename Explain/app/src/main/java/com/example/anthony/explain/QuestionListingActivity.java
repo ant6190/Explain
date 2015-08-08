@@ -1,24 +1,22 @@
 package com.example.anthony.explain;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-public class MainMenuActivity extends AppCompatActivity {
+public class QuestionListingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_question_listing);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_question_listing, menu);
         return true;
     }
 
@@ -35,20 +33,5 @@ public class MainMenuActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void gotToQuestion(View view) {
-        Intent intent = new Intent(this, QuestionListingActivity.class);
-        startActivity(intent);
-    }
-
-    public void askAQuestion(View view) {
-        Intent intent = new Intent(this, AskQuestionActivity.class);
-        startActivity(intent);
-    }
-
-    public void getAnswers(View view) {
-        Intent intent = new Intent(this, PendingAnswersActivity.class);
-        startActivity(intent);
     }
 }

@@ -20,6 +20,18 @@
             android:name=".MainMenuActivity"
             android:label="@string/title_activity_main_menu" >
         </activity>
+        <activity
+            android:name=".QuestionListingActivity"
+            android:label="@string/title_activity_question_listing" >
+        </activity>
+        <activity
+            android:name=".AskQuestionActivity"
+            android:label="@string/title_activity_ask_question" >
+        </activity>
+        <activity
+            android:name=".PendingAnswersActivity"
+            android:label="@string/title_activity_pending_answers" >
+        </activity>
     </application>
 
 </manifest>
