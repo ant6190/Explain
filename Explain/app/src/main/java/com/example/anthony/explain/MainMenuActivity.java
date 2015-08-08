@@ -1,32 +1,22 @@
 package com.example.anthony.explain;
 
-import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-
-public class MainActivity extends ActionBarActivity implements View.OnClickListener {
-
-    Button mainButton;
+public class MainMenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        mainButton = (Button) findViewById(R.id.main_button);
-        mainButton.setOnClickListener(this);
+        setContentView(R.layout.activity_main_menu);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main_menu, menu);
         return true;
     }
 
@@ -44,10 +34,4 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         return super.onOptionsItemSelected(item);
     }
-
-    @Override
-    public void onClick(View view) {
-            Intent intent = new Intent(this, MainMenuActivity.class);
-            startActivity(intent);
-        }
 }
