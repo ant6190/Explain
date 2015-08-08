@@ -7,16 +7,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
     Button mainButton;
+    User temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        temp = new User("ant","12345");
 
         mainButton = (Button) findViewById(R.id.main_button);
         mainButton.setOnClickListener(this);
@@ -47,7 +51,13 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        EditText tempUserEdit = (EditText) findViewById(R.id.userName);
+        String tempUser = tempUserEdit.getText().toString();
+        EditText tempPassEdit = (EditText) findViewById(R.id.pass);
+        String tempPass = tempPassEdit.getText().toString();
+        if(temp.getPassword() == tempPass && temp.getUserName() == tempUser){
             Intent intent = new Intent(this, MainMenuActivity.class);
             startActivity(intent);
+            }
         }
 }

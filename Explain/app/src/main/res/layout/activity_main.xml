@@ -5,11 +5,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText android:text="username" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <EditText android:hint="username" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/userName"/>
 
-    <EditText android:text="password" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"  />
+    <EditText android:hint="password" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/pass" />
 
     <Button android:text="Login" android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:id="@+id/main_button" />

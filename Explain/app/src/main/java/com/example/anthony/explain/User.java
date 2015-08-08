@@ -6,9 +6,11 @@ package com.example.anthony.explain;
 public class User {
 
     private String userName;
+    private String password;
 
-    public User(String userName){
+    public User(String userName, String password){
         this.userName = userName;
+        this.password = password;
     }
 
     public String getUserName(){
@@ -17,5 +19,9 @@ public class User {
 
     public void setUserName(String user){
         this.userName = user;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
