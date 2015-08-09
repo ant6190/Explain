@@ -6,13 +6,21 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainMenuActivity extends AppCompatActivity {
+
+    String user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("user");
+        TextView errorText = (TextView) findViewById(R.id.welcome_text);
+        errorText.setText("Welcome, " + message);
+        user = message;
     }
 
     @Override

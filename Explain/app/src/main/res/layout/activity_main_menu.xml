@@ -7,6 +7,9 @@
     android:orientation="vertical"
     tools:context="com.example.anthony.explain.MainMenuActivity">
 
+    <TextView android:text="@string/welcome_name" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/welcome_text" />
+
     <Button android:text="@string/active_questions" android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:id="@+id/active_questions" android:onClick="goToQuestions" />
 

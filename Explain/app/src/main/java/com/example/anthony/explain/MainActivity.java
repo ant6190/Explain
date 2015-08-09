@@ -1,6 +1,7 @@
 package com.example.anthony.explain;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -58,10 +59,13 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         String tempPass = tempPassEdit.getText().toString();
         if(temp.getPassword().compareTo(tempPass) == 0 && temp.getUserName().compareTo(tempUser) == 0){
             Intent intent = new Intent(this, MainMenuActivity.class);
+            intent.putExtra("user", temp.getUserName());
             startActivity(intent);
             }
         else{
             TextView errorText = (TextView) findViewById(R.id.error_text);
+            errorText.setText("Wrong Username and/or password");
+            errorText.setTextColor(Color.RED);
             }
         }
 }
