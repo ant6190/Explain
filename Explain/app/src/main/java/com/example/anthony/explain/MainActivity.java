@@ -16,6 +16,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     Button mainButton;
     User temp;
+    User temp2;
+    User temp3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         temp = new User("ant","12345");
+        temp2 = new User("ali","55555");
+        temp3 = new User("eug","98765");
 
         mainButton = (Button) findViewById(R.id.main_button);
         mainButton.setOnClickListener(this);
@@ -62,6 +66,17 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             intent.putExtra("user", temp.getUserName());
             startActivity(intent);
             }
+        else if(temp2.getPassword().compareTo(tempPass) == 0 && temp2.getUserName().compareTo(tempUser) == 0){
+            Intent intent = new Intent(this, MainMenuActivity.class);
+            intent.putExtra("user", temp2.getUserName());
+            startActivity(intent);
+        }
+        else if(temp3.getPassword().compareTo(tempPass) == 0 && temp3.getUserName().compareTo(tempUser) == 0){
+            Intent intent = new Intent(this, MainMenuActivity.class);
+            intent.putExtra("user", temp3.getUserName());
+            startActivity(intent);
+        }
+
         else{
             TextView errorText = (TextView) findViewById(R.id.error_text);
             errorText.setText("Wrong Username and/or password");

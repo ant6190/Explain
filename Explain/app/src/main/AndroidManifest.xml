@@ -32,6 +32,18 @@
             android:name=".PendingAnswersActivity"
             android:label="@string/title_activity_pending_answers" >
         </activity>
+        <activity
+            android:name=".QuestionViewActivity"
+            android:label="@string/title_activity_question_view" >
+        </activity>
+        <activity
+            android:name=".SumbitAnswerActivity"
+            android:label="@string/title_activity_sumbit_answer" >
+        </activity>
+        <activity
+            android:name=".TestServerActivity"
+            android:label="@string/title_activity_test_server" >
+        </activity>
     </application>
 
 </manifest>

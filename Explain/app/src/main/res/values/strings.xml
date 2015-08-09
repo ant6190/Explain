@@ -16,5 +16,10 @@
     <string name="title_activity_pending_answers">PendingAnswersActivity</string>
     <string name="username_right"></string>
     <string name="welcome_name"></string>
+    <string name="question_description">Question Description</string>
+    <string name="title_activity_question_view">QuestionViewActivity</string>
+    <string name="title_activity_sumbit_answer">SumbitAnswerActivity</string>
+    <string name="your_answer">Your Answer</string>
+    <string name="title_activity_test_server">TestServerActivity</string>
 
 </resources>

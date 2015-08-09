@@ -3,17 +3,22 @@ package com.example.anthony.explain;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class QuestionListingActivity extends AppCompatActivity {
+public class QuestionListingActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     ArrayList<Question> questions;
     String user;
+    ListView main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +44,12 @@ public class QuestionListingActivity extends AppCompatActivity {
                 questionTitles.add(questions.get(i).getqText());
             }
         }
-        mainListView = (ListView) findViewById(R.id.listview);
+        mainListView = (ListView) findViewById(R.id.questions);
+        main = mainListView;
         mArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, questionTitles);
 
         mainListView.setAdapter(mArrayAdapter);
+        mainListView.setOnItemClickListener(this);
 
     }
 
@@ -66,5 +73,18 @@ public class QuestionListingActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        // Log the item's position and contents
+        // to the console in Debug
+        Intent intent = new Intent(this, QuestionViewActivity.class);
+        Question tempQ = questions.get(position);
+        intent.putExtra("user", user);
+        intent.putExtra("qText", tempQ.getqText());
+        intent.putExtra("qDesc", tempQ.getqDesc());
+        intent.putExtra("qUser", tempQ.getqUser().getUserName());
+        startActivity(intent);
     }
 }

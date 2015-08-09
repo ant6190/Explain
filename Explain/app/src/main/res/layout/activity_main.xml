@@ -12,7 +12,7 @@
         android:layout_height="wrap_content" android:id="@+id/pass" />
 
     <Button android:text="Login" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:id="@+id/main_button" />
+        android:layout_height="wrap_content" android:id="@+id/main_button" android:onClick="SumbitAns"/>
 
     <TextView android:text="@string/username_right" android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:id="@+id/error_text" />

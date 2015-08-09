@@ -6,10 +6,15 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.anthony.explain.QuestionListingActivity">
 
+    <TextView android:text="@string/welcome_name" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/welcome_text" />
+
     <ListView
-        android:id="@+id/main_listview"
+        android:id="@+id/questions"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_marginTop="20dp"/>
+
 
 </LinearLayout>
