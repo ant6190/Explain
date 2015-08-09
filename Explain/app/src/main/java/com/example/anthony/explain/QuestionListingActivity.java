@@ -39,7 +39,7 @@ public class QuestionListingActivity extends AppCompatActivity {
                 questionTitles.add(questions.get(i).getqText());
             }
         }
-        mainListView = (ListView) findViewById(R.id.main_listview);
+        mainListView = (ListView) findViewById(R.id.listview);
         mArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, questionTitles);
 
         mainListView.setAdapter(mArrayAdapter);
