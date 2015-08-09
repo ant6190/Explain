@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
@@ -55,9 +56,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         String tempUser = tempUserEdit.getText().toString();
         EditText tempPassEdit = (EditText) findViewById(R.id.pass);
         String tempPass = tempPassEdit.getText().toString();
-        if(temp.getPassword() == tempPass && temp.getUserName() == tempUser){
+        if(temp.getPassword().compareTo(tempPass) == 0 && temp.getUserName().compareTo(tempUser) == 0){
             Intent intent = new Intent(this, MainMenuActivity.class);
             startActivity(intent);
+            }
+        else{
+            TextView errorText = (TextView) findViewById(R.id.error_text);
             }
         }
 }

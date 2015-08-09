@@ -14,5 +14,6 @@
     <string name="additional_info">Addition Info</string>
     <string name="submit">Submit</string>
     <string name="title_activity_pending_answers">PendingAnswersActivity</string>
+    <string name="username_right"></string>
 
 </resources>
