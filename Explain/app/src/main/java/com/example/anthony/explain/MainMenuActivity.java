@@ -47,6 +47,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
     public void goToQuestions(View view) {
         Intent intent = new Intent(this, QuestionListingActivity.class);
+        intent.putExtra("user", user);
         startActivity(intent);
     }
 
